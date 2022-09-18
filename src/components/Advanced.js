@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import brand from "../images/icon-brand-recognition.svg";
 import records from "../images/icon-detailed-records.svg";
 import fully from "../images/icon-fully-customizable.svg";
+//Aos animation
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Advanced = () => {
+	useEffect(() => {
+		Aos.init({ duration: 3000 });
+	}, []);
 	return (
 		<section className="bg-gray-100 pt-32 pb-10 lg:pb-40">
 			<div className="max-width">
@@ -14,7 +20,10 @@ const Advanced = () => {
 					Track how your links are performing across the web <br /> with our
 					advanced statistics dashboard.
 				</p>
-				<div className="card grid text-center grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+				<div
+					data-aos="fade-down-right"
+					className="card grid text-center grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
+				>
 					<article className="bg-white p-5 rounded grid">
 						<img
 							src={brand}

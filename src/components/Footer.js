@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import facebook from "../images/icon-facebook.svg";
 import twitter from "../images/icon-twitter.svg";
 import pinterest from "../images/icon-pinterest.svg";
 import instagram from "../images/icon-instagram.svg";
 import logo from "../images/footer-logo.svg";
+//Aos animation
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Footer = () => {
+	useEffect(() => {
+		Aos.init({ duration: 3000 });
+	}, []);
+
 	return (
 		<footer className="bg-slate-900 py-10 lg:py-14">
-			<div className="max-width grid grid-cols-1 gap-7 md:grid-cols-3 lg:grid-cols-5">
+			<div
+				data-aos="fade-down-left"
+				className="max-width grid grid-cols-1 gap-7 md:grid-cols-3 lg:grid-cols-5"
+			>
 				<article>
 					<img src={logo} alt="" />
 				</article>

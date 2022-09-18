@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bgMovile from "../images/bg-boost-mobile.svg";
 import bgDesktop from "../images/bg-boost-desktop.svg";
+//Aos animation
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Boost = () => {
+	useEffect(() => {
+		Aos.init({ duration: 3000 });
+	}, []);
 	return (
-		<section className="boost relative">
+		<section data-aos="fade-down" className="boost relative">
 			<picture>
 				<source media="(min-width: 768px)" srcSet={bgDesktop} />
 				<img src={bgMovile} alt="" />

@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import bgMovileShortener from "../images/bg-shorten-mobile.svg";
 import bgDesktopShortener from "../images/bg-shorten-desktop.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAsyncLinks } from "../features/links/linkSlice";
 import isValidUrl from "../common/validURL";
 import { toast } from "react-toastify";
+//Aos animation
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Shortener = () => {
 	const [text, setText] = useState("");
@@ -37,8 +40,12 @@ const Shortener = () => {
 		setButtonText("Copied!");
 	};
 
+	useEffect(() => {
+		Aos.init({ duration: 3000 });
+	}, []);
+
 	return (
-		<section className="max-width shortener relative">
+		<section data-aos="fade-down-left" className="max-width shortener relative">
 			<picture>
 				<source media="(min-width: 768px)" srcSet={bgDesktopShortener} />
 				<img src={bgMovileShortener} alt="bg-shortener" />
