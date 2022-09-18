@@ -4,6 +4,7 @@ import bgDesktopShortener from "../images/bg-shorten-desktop.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAsyncLinks } from "../features/links/linkSlice";
 import isValidUrl from "../common/validURL";
+import { toast } from "react-toastify";
 
 const Shortener = () => {
 	const [text, setText] = useState("");
@@ -18,9 +19,10 @@ const Shortener = () => {
 		e.preventDefault();
 		if (isValidUrl(text)) {
 			dispatch(fetchAsyncLinks(text));
+			toast.success("Link shortened successfully!");
 			setText("");
 		} else {
-			alert("Please enter a valid link");
+			toast.error("Please enter a valid link");
 		}
 	};
 
@@ -31,6 +33,7 @@ const Shortener = () => {
 
 	const handleCopy = () => {
 		navigator.clipboard.writeText(shortLink);
+		toast.success("Copied to clipboard!");
 		setButtonText("Copied!");
 	};
 
