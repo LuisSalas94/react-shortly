@@ -32,6 +32,25 @@ h1 {
 	@apply px-5 lg:max-w-5xl lg:mx-auto xl:max-w-6xl 2xl:px-0;
 }
 
+.shortener {
+	background-color: hsl(257, 27%, 26%);
+	height: 17.188rem;
+	border-radius: 8px;
+}
+
+.shortener img{
+	height: 17.188rem;
+	@apply w-full rounded-lg;
+}
+
+.shortener .form{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+}
+
 .btn-cta {
 	@apply bg-cyan-500 py-2 px-4 text-white hover:opacity-75 transition-all duration-150;
 }
@@ -46,9 +65,9 @@ h1 {
 	@apply w-full;
 }
 
-.boost .boost-inner{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+.boost .boost-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
