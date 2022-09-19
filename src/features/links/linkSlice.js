@@ -19,7 +19,11 @@ const initialState = {
 const linkSlice = createSlice({
 	name: "links",
 	initialState,
-	reducers: {},
+	reducers: {
+		removeFromState: (state, { payload }) => {
+			state.links = {};
+		},
+	},
 	extraReducers: {
 		[fetchAsyncLinks.fulfilled]: (state, { payload }) => {
 			console.log("Successfully fetched links", payload);
@@ -31,5 +35,5 @@ const linkSlice = createSlice({
 	},
 });
 
-export const { addLinks } = linkSlice.actions;
+export const { addLinks, removeFromState } = linkSlice.actions;
 export default linkSlice.reducer;
