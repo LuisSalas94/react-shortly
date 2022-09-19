@@ -10,7 +10,7 @@ const Showcase = () => {
 	}, []);
 
 	return (
-		<section className="py-10 h-screen lg:py-20">
+		<section className="py-10  md:h-3/4 lg:h-screen lg:py-20">
 			<div
 				data-aos="fade-down-right"
 				className="max-width grid mt-10 grid-cols-1 gap-5  md:grid-cols-2 md:gap-10 md:place-items-center md:mt-36 lg:mt-32"

@@ -5,7 +5,6 @@ import bgDesktopShortener from "../images/bg-shorten-desktop.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAsyncLinks } from "../features/links/linkSlice";
 import isValidUrl from "../common/validURL";
-
 //Toastify
 import { toast } from "react-toastify";
 //Aos animation

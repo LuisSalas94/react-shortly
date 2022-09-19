@@ -43,22 +43,25 @@ export const ShortenerInfo = () => {
 					<li className="md:mr-5">
 						<button className="text-cyan-500">{shortLink}</button>
 					</li>
-					<li>
-						<button
-							onClick={handleCopy}
-							className="btn-cta rounded-lg text-sm focus:bg-slate-800 "
-						>
-							{buttonText}
-						</button>
-					</li>
-					<li>
-						<button
-							onClick={handleRemove}
-							className="btn-cta rounded-lg text-sm focus:bg-slate-800 my-2 md:mx-2"
-						>
-							{secondText}
-						</button>
-					</li>
+
+					<div className="flex justify-center items-center">
+						<li>
+							<button
+								onClick={handleCopy}
+								className="btn-cta rounded-lg text-sm focus:bg-slate-800 "
+							>
+								{buttonText}
+							</button>
+						</li>
+						<li>
+							<button
+								onClick={handleRemove}
+								className="btn-cta mx-2 rounded-lg text-sm focus:bg-slate-800 my-2 md:mx-2"
+							>
+								{secondText}
+							</button>
+						</li>
+					</div>
 				</ul>
 			</article>
 		</div>

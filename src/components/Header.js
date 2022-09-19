@@ -9,7 +9,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className="header max-width py-5">
+		<header className="header invisible md:visible max-width md:my-5">
 			<div className="flex items-center justify-between">
 				<article className="flex items-center">
 					<img src={logo} alt="" />
