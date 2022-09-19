@@ -24,6 +24,9 @@ Your users should be able to:
 - React Toastify
 - AOS (Animate on Scroll Library)
 
+## Full Screen View
+<img src="./src/demo.png" alt="Full Screen View" />
+
 ## Instructions
 
 First clone this repository.
