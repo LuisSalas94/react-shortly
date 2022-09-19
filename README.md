@@ -46,7 +46,7 @@ $ npm start # or yarn start
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://react-url-shortening-api.netlify.app/)
 
 
 ## Author 👤
@@ -61,7 +61,7 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](../../issues/).
 
 ## Acknowledgments 📚 
-Original challege by [Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G)
+Original challenge by [Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G)
 
 ## Show your support
 
